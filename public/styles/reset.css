@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores principais */
+  --orange: #ff4400;
+  --blue: #36357e;
+  --white: #fff;
+
+  /* Fontes */
+  --main-font: 'Metropolis', sans-serif;
+  /* --montserrat */
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+body div {
+  background: var(--orange);
+  color: var(--white);
+}
+
+body div + div {
+  background: var(--blue);
+}
