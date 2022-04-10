@@ -39,12 +39,26 @@ body {
 
 .card__image {
   width: 100%;
-  height: auto;
-  background-image: linear-gradient(rgba(0,0,0,0) 40%, rgba(0,0,0,.8)), url('/public/images/orange.svg');
-  background-size: cover;
-  background-position: center;
-  border-radius: .5rem;
-  opacity: .8;
+  height: 100%;
+  position: relative;
+}
+
+.card__image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1));
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.card__image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem 0 0 .5rem;
 }
 
 .card__user {
