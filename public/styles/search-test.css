@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Calibri', sans-serif;
+  background: #FEBBA2;
+
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem auto;
+  width: 90%;
+  gap: 1rem;
+}
+
+.cards {
+  display: block;
+  margin: 2rem auto;
+  width: 90%;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 30vw;
+  min-height: 10rem;
+  background: #A8A8D0;
+  position: relative;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.card__image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1));
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.card__image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.card__user {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 .5rem black;
+  font-size: 1.125rem;
+  width: 25%;
+}
+
+.card__info {
+  padding: 1rem;
+  font-size: 1.125rem;
+  display: grid;
+}
+
+.card__user p, .card__info--contact p:first-child {
+  font-weight: 700;
+}
+
+.card__info--techs {
+  display: inline-block;  
+}
+
+
+@media screen and (min-width: 768px){
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card{
+    margin: 0;
+    grid-template-columns: 1fr 2fr;
+    height: 10vw;
+    min-height: 12rem;
+    position: relative;
+  }
+}
