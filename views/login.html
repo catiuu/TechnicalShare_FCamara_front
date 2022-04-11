@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="/public/styles/login.css" />
   </head>
   <body>
-    <!-- <header></header> -->
     <main>
       <section class="login">
+        <!-- Título da página, "visível" apenas para leitores de tela -->
         <h1 class="sr-only">Technical Share - Login</h1>
         <img
           src="/public/images/share-logo.svg"
@@ -47,12 +47,14 @@
               id="password"
               placeholder="Senha"
             />
+            <!-- Usar role para redesignar a função de âncora para botão. Aria-label para acessibilidade. -->
             <a
               href="#"
               role="button"
               aria-label="Visualizar senha"
               class="login__form--viewpass"
             >
+              <!-- Aria-hidden e alt vazio para evitar que a imagem seja lida pelo NVDA (imagem apenas ilustrativa) -->
               <img
                 src="/public/images/el_eye-close.svg"
                 alt=""

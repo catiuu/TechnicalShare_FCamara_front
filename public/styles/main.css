@@ -4,6 +4,8 @@
   top: 0;
   padding: .5625rem 1rem;
   box-shadow: 0px 2px 4px rgba(171, 171, 171, 0.5);
+  background: var(--white);
+  z-index: 100;
 }
 
 .container {
@@ -77,15 +79,14 @@
 }
 
 .main__form input {
-  border-radius: 1.5625rem 0 0 1.5625rem;
+  border-radius: 3.45rem 0 0 3.45rem;
   border: 1px solid rgba(51, 51, 51, 0.259);
   background: var(--white);
   padding: 1rem 1.5rem;
-
 }
 
 .main__form button {
-  border-radius: 0 1.5625rem 1.5625rem 0;
+  border-radius: 0 3.45rem 3.45rem 0;
   background: var(--button-color);
   padding: 1rem 1.5rem;
 }
@@ -99,4 +100,93 @@
   bottom: 0;
   right: 0;
   width: 100vw;
+}
+
+.main__result {
+  margin: 0 1.5rem 1.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.main__result--cards {
+  display: block;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.main__result--card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "photo name"
+    ". info"
+    ". link";
+  position: relative;
+  border-top: 1px solid var(--card-border);
+  padding: .5rem .5rem;
+}
+
+.main__result--image img {
+  grid-area: photo;
+  width: 2.5rem;
+  clip-path: circle();
+  object-fit: cover;
+  margin-right: .5625rem;
+}
+
+.main__result--user {
+  grid-area: name;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.main__result--user .main__result--user_job {
+  font-size: .75rem;
+  font-weight: 400;
+  opacity: .6;
+}
+
+.main__result--techs {
+  grid-area: info;
+  padding-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.main__result--techs p {
+  display: inline-block;
+  font-size: .625rem;
+  font-weight: 700;
+  color: var(--white);
+  background: var(--button-color);
+  line-height: .875rem;
+  padding: .375rem .75rem;
+  border-radius: 1.375rem;
+  margin-bottom: .25rem;
+}
+
+.main__result--user p, .main__result--info_contact p:first-child {
+  font-weight: 700;
+}
+
+.main__result--info_techs {
+  display: inline-block;  
+}
+
+.main__result--link {
+  grid-area: link;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main__result--link a {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--orange);
+  padding: .5rem .5625rem;
+  border: 1px solid var(--orange);
+  border-radius: 1.25rem;
+  margin-top: .625rem;
 }

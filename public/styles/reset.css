@@ -15,6 +15,7 @@
   --login-legend: #414099;
   --button-color: #4B4FA1;
   --light-grey: #F3F4F9;
+  --card-border: #E2E2E2;
   --grey: #79797b;
   --black: #303033;
 
@@ -27,7 +28,7 @@ body {
   height: 100vh;
   font-family: var(--main-font);
   line-height: 1.3rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body, button, input, textarea, select {
@@ -43,7 +44,8 @@ input, textarea, select {
 }
 
 ::placeholder {
-  font-size: 1rem;
+  font-size: .75rem;
+  font-weight: 400;
   color: var(--black);
   opacity: .6;
 }
@@ -59,6 +61,7 @@ input, textarea, select {
   border-radius: .5rem;
 }
 
+/* Screen reader only: elementos de acessibilidade que não aparecem visualmente, mas devem ser lidos pelo NVDA devem possuir esta classe */
 .sr-only {
   position: absolute;
   height: 1px;
