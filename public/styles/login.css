@@ -38,7 +38,7 @@ body {
   background: url('/public/images/ondas-b.svg') no-repeat;
   background-size: cover;
   position: absolute;
-  bottom: -2.81rem;
+  bottom: -2.3rem;
   right: -3rem;
   z-index: -1;
 }

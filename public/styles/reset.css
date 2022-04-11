@@ -8,13 +8,14 @@
 
 :root {
   /* Cores principais */
-  /* --orange: #ff4400;
-  --blue: #36357e; */
+  --orange: #ff4400;
+  /* --blue: #36357e; */
   --white: #ffffff;
   --login-bg-color: #FFF5EE;
   --login-legend: #414099;
   --button-color: #4B4FA1;
   --light-grey: #F3F4F9;
+  --grey: #79797b;
   --black: #303033;
 
   /* Fontes */
@@ -26,6 +27,7 @@ body {
   height: 100vh;
   font-family: var(--main-font);
   line-height: 1.3rem;
+  overflow: hidden;
 }
 
 body, button, input, textarea, select {
@@ -38,6 +40,12 @@ input, textarea, select {
   background: var(--light-grey);
   padding: .6875rem .5rem;
   border-radius: .375rem;
+}
+
+::placeholder {
+  font-size: 1rem;
+  color: var(--black);
+  opacity: .6;
 }
 
 .button {

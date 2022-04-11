@@ -4,7 +4,7 @@
 
 ---
 
-**Link da UI no Figma:** :artist_palette: https://www.figma.com/file/EO58GAr06G8QHEC2RLqtts/Squad-3?node-id=142%3A5
+**Link da UI no Figma:** :art: https://www.figma.com/file/EO58GAr06G8QHEC2RLqtts/Squad-3?node-id=142%3A5
 
 **Repositório de Backend:** :globe_with_meridians: https://github.com/catiuu/TechnicalShare_FCamara_back
 

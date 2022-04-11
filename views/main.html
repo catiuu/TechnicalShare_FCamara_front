@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Technical Share FCamara" />
+    <meta
+      name="description"
+      content="Aplicação desenvolvida durante o hackathon do Programa de Formação Season 3."
+    />
+    <meta name="author" content="Squad-3 do Programa de Formação Season 3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <title>Technical Share</title>
+    <link rel="stylesheet" href="/public/styles/global.css" />
+    <link rel="stylesheet" href="/public/styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="sr-only">Technical Share - Página principal</h1>
+      <nav>
+        <img
+          class="header__logo"
+          src="/public/images/share-logo.svg"
+          alt="Logomarca da plataforma"
+        />
+        <div class="header__user">
+          <p>Olá, Marta!</p>
+          <img src="/public/images/random-user-f.png" alt="Usuário logado" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="main container">
+      <section class="main__text">
+        <p class="main__text--title">
+          <span>Encontre um</span><br />
+          #Sangue Laranja
+        </p>
+        <p>Você pode encontrar um profissional pelo:</p>
+        <p>Nome. 2. Hard ou Soft Skills 3. Profissão.</p>
+      </section>
+
+      <section class="main__form">
+        <form action="#">
+          <label for="search" class="sr-only">
+            Digite um nome, skill ou profissão:
+          </label>
+          <input type="search" id="search" placeholder="Buscar" />
+          <button type="submit">
+            <img src="/public/images/search.svg" alt="" aria-hidden="true" />
+          </button>
+        </form>
+      </section>
+      <section class="main__image">
+        <img src="/public/images/main-bg.png" alt="" aria-hidden="true" />
+      </section>
+    </main>
+  </body>
+</html>
