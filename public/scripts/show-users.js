@@ -27,13 +27,13 @@ function getUsers() {
       </div>
       <div class="main__result--user">
         <p class="main__result--user_name" data-filter="userName">${user.fullName}</p>
-        <p class="main__result--user_job" data-filter="userJob">${user.jobTitle} • Júnior • ${user.pronouns} 🏵️</p>
+        <p class="main__result--user_job" data-filter="userJob">${user.jobTitle} • ${user.pronouns} 🏵️</p>
       </div>
       <div class="main__result--techs">
           ${userSkills}
       </div>
       <div class="main__result--link">
-        <a href="#">Ver Perfil</a>
+        <a href="/views/parts/profile.html">Ver Perfil</a>
       </div>
       `
         cards.appendChild(userCard)

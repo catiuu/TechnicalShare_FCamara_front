@@ -27,7 +27,7 @@ body {
   display: flex;
   height: 100vh;
   font-family: var(--main-font);
-  line-height: 1.3rem;
+  line-height: 1rem;
   overflow-x: hidden;
 }
 
@@ -48,28 +48,4 @@ input, textarea, select {
   font-weight: 400;
   color: var(--black);
   opacity: .6;
-}
-
-.button {
-  text-transform: uppercase;
-  font-size: .875rem;
-  font-weight: 700;
-  color: var(--white);
-  width: 100%;
-  padding: .75rem 0;
-  background: var(--button-color);
-  border-radius: .5rem;
-}
-
-/* Screen reader only: elementos de acessibilidade que não aparecem visualmente, mas devem ser lidos pelo NVDA devem possuir esta classe */
-.sr-only {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
 }

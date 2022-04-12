@@ -1,45 +1,3 @@
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: .5625rem 1rem;
-  box-shadow: 0px 2px 4px rgba(171, 171, 171, 0.5);
-  background: var(--white);
-  z-index: 100;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--white);
-  padding: 3.125rem 1rem;
-  width: 100%;
-}
-
-.header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  height: 2rem;
-}
-
-.header__user {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  color: var(--black);
-  font-weight: 700;
-  font-size: .875rem;
-}
-
-.header__user img {
-  width: 1.875rem;
-}
-
 .main__text {
   margin-bottom: 2rem;
 }
@@ -123,7 +81,6 @@
     "photo name"
     ". info"
     ". link";
-  position: relative;
   border-top: 1px solid var(--card-border);
   padding: .5rem .5rem;
 }
@@ -143,7 +100,7 @@
   font-weight: 700;
 }
 
-.main__result--user .main__result--user_job {
+.main__result--user .main__result--user_job, .profile__user--bio {
   font-size: .75rem;
   font-weight: 400;
   opacity: .6;
@@ -155,16 +112,16 @@
   font-size: 1.125rem;
 }
 
-.main__result--techs p {
+.main__result--techs p, .profile__techs p {
   display: inline-block;
-  font-size: .625rem;
+  font-size: .75rem;
   font-weight: 700;
-  color: var(--white);
-  background: var(--button-color);
+  background: var(--light-grey);
+  color: var(--button-color);
   line-height: .875rem;
   padding: .375rem .75rem;
   border-radius: 1.375rem;
-  margin-bottom: .25rem;
+  margin-bottom: .5rem;
 }
 
 .main__result--user p, .main__result--info_contact p:first-child {
@@ -181,7 +138,7 @@
   justify-content: flex-end;
 }
 
-.main__result--link a {
+.main__result--link a, .profile__contact--slack, .profile__contact--teams, .profile__contact--edit {
   font-size: .75rem;
   font-weight: 700;
   color: var(--orange);
@@ -189,4 +146,95 @@
   border: 1px solid var(--orange);
   border-radius: 1.25rem;
   margin-top: .625rem;
+}
+
+.profile__contact--teams {
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
+  margin-left: .5rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "photo user"
+    "tech tech"
+    "contact contact";
+  width: 100%;
+  background: var(--white);
+  padding: 0 .5rem;
+  margin: 3rem 0 0;
+}
+
+.profile__image img {
+  grid-area: photo;
+  width: 5rem;
+  margin-right: 1rem;
+  clip-path: circle();
+}
+
+.profile__user {
+  grid-area: user;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.profile__user--name {
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--black);
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+
+.profile__user--job, .profile__user--pronouns {
+  font-weight: 300;
+  font-size: .75rem;
+  color: var(--black);
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+
+.profile__user--pronouns {
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.profile__techs {
+  grid-area: tech;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.profile__techs h2, .profile__contact h2 {
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+.profile__contact {
+  grid-area: contact;
+}
+
+.profile__contact--links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__contact div {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile__contact a {
+  display: inline;
+}
+
+.profile__contact img {
+  vertical-align: middle;
+}
+
+.profile__contact--edit.hide {
+  display: none;
 }

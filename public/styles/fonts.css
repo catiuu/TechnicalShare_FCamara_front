@@ -26,12 +26,12 @@
   font-weight: 100;
 } */
 
-/* @font-face {
+@font-face {
   font-family: 'Metropolis';
   src: url('/public/fonts/Metropolis-Medium.otf') format('opentype');
   font-style: normal;
   font-weight: 500;
-} */
+}
 
 /* @font-face {
   font-family: 'Metropolis';
