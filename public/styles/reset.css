@@ -43,9 +43,23 @@ input, textarea, select {
   border-radius: .375rem;
 }
 
+a, button {
+  cursor: pointer;
+}
+
 ::placeholder {
   font-size: .75rem;
   font-weight: 400;
   color: var(--black);
   opacity: .6;
+}
+
+@media screen and (min-width: 1280px) {
+  ::placeholder{
+    font-size: 1rem;
+  }
+
+  input, textarea, select {
+    padding: .75rem 1rem;
+  }
 }
