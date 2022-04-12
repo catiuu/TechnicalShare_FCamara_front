@@ -1,6 +1,7 @@
 .modal-wrapper.active {
   visibility: visible;
   opacity: 1;
+  z-index: 10;
 }
 
 .modal-wrapper {
@@ -17,56 +18,106 @@
 
 .modal-wrapper .modal {
   background: var(--login-bg-color);
-  width: min(37rem, 82.5%);
+  width: min(35rem, 82.5%);
   margin: auto;
   border-radius: 0.625rem;
   padding: 2rem 1rem;
   position: relative;
 }
 
+.modal-wrapper .modal::after {
+  content: '';
+  background: url('/public/images/lupa.png') no-repeat;
+  width: 8rem;
+  height: 5.5rem;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  border-radius: 0.625rem;
+}
+
+.modal-wrapper .modal h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.32rem;
+  color: var(--black);
+}
+
+.modal-wrapper .modal p {
+  font-size: .75rem;
+  font-weight: normal;
+  margin-bottom: .5rem;
+  color: var(--grey);
+}
+
+.modal-wrapper .modal span {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.modal-wrapper .modal input {
+  border-radius: 0.5rem;
+  border: 2px solid var(--blue);
+  padding: 0.8125rem 1rem;
+  margin-bottom: 2.5rem;
+  outline: none;
+  width: min(18rem, 70%);
+}
+
+.modal .button {
+  width: auto;
+  padding: .625rem 1rem;
+  margin: 1rem 0 3rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-wrapper .modal {
+    border-radius: 1.875rem;
+    padding: 9rem 6rem;
+    width: 47.5rem;
+  }
+
+  .modal-wrapper .modal::before {
+    content: '';
+    background: url('/public/images/foguete.png') no-repeat;
+    width: 12.32rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 1.875rem;
+  }
+
   .modal-wrapper .modal::after {
     content: '';
-    background: url('/public/images/image_png_lupa.png') no-repeat;
-    width: 8rem;
-    height: 5.5rem;
+    background: url('/public/images/lupa-desk.png') no-repeat;
+    width: 17.75rem;
+    height: 30rem;
     bottom: 0;
     right: 0;
     position: absolute;
-    border-radius: 0.625rem;
+    border-radius: 1.875rem;
   }
 
   .modal-wrapper .modal h2 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.32rem;
-    color: var(--black);
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.625rem;
   }
   
   .modal-wrapper .modal p {
-    font-size: .75rem;
-    font-weight: normal;
-    margin-bottom: .5rem;
-    color: var(--grey);
-  }
-  
-  .modal-wrapper .modal span {
-    font-weight: 900;
-    color: var(--orange);
-  }
-
-  .modal-wrapper .modal input {
-    border-radius: 0.5rem;
-    border: 2px solid var(--blue);
-    padding: 0.8125rem 1rem;
-    margin-bottom: 2.5rem;
-    outline: none;
-    width: min(18rem, 70%);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+    max-width: 26rem;
   }
   
   .modal .button {
-    width: auto;
-    padding: .625rem 1rem;
-    margin: 1rem 0 3rem;
+    padding: .75rem 2.625rem;
+    margin: .5rem 0 0;
     line-height: 1rem;
   }
+  
+}

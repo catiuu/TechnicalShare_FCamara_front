@@ -63,13 +63,29 @@
     </main>
 
     <!-- MODAL que será aberta no primeiro acesso. Para mostrar a modal, será acrescentada a classe "active" -->
-    <div class="modal-wrapper">
+    <div class="modal-wrapper active">
       <div class="modal">
         <h2>Conheça o Orange Share!</h2>
-        <p>Aqui é o lugar certo para você compartilhar seus conhecimentos e encontrar um <span>#SangueLaranja</span> de forma simples e rápida.</p>
-        <p>Conecte-se com pessoas que vão te ajudar a tirar dúvidas técnicas ou te oferecer um suporte para planejamento de estudo e carreira.</p>
+        <p>
+          Aqui é o lugar certo para você compartilhar seus conhecimentos e
+          encontrar um <span>#SangueLaranja</span> de forma simples e rápida.
+        </p>
+        <p>
+          Conecte-se com pessoas que vão te ajudar a tirar dúvidas técnicas ou
+          te oferecer um suporte para planejamento de estudo e carreira.
+        </p>
         <button type="button" class="button">Bora lá!</button>
       </div>
     </div>
+
+    <!-- Script temporário apenas para teste da modal -->
+    <script>
+      let modal = document.querySelector('.modal-wrapper')
+      let button = document.querySelector('.modal-wrapper .button')
+
+      button.addEventListener('click', () => {
+        modal.classList.remove('active')
+      })
+    </script>
   </body>
 </html>
