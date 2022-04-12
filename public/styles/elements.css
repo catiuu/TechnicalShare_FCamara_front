@@ -27,7 +27,7 @@
     height: 2rem;
   }
   
-  .header__user {
+  .header__user a {
     display: flex;
     align-items: center;
     gap: .5rem;
