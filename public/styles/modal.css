@@ -27,9 +27,11 @@
 
 .modal-wrapper .modal::after {
   content: '';
-  background: url('/public/images/lupa.png') no-repeat;
+  background: url('/public/images/lupa-desk.png') no-repeat;
+  background-position: bottom;
+  background-size: cover;
   width: 8rem;
-  height: 5.5rem;
+  height: 6rem;
   bottom: 0;
   right: 0;
   position: absolute;

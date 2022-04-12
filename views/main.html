@@ -29,7 +29,9 @@
         />
         <div class="header__user">
           <p>Olá, Marta!</p>
-          <img src="/public/images/random-user-f.png" alt="Usuário logado" />
+          <a href="">
+            <img src="/public/images/random-user-f.png" alt="Usuário logado" />
+          </a>
         </div>
       </nav>
     </header>
@@ -46,24 +48,26 @@
 
       <section class="main__form">
         <form action="#">
-          <label for="search" class="sr-only">
-            Digite um nome, skill ou profissão:
-          </label>
-          <input type="search" id="search" placeholder="Buscar" />
-          <button type="submit" aria-label="Pesquisar">
-            <img src="/public/images/search.svg" alt="" aria-hidden="true" />
-          </button>
-        </form>
-      </section>
-
-      <section class="main__image">
-        <!-- Aria-hidden e alt vazio para evitar que a imagem seja lida pelo NVDA (imagem apenas ilustrativa) -->
-        <img src="/public/images/main-bg.png" alt="" aria-hidden="true" />
+            <label for="search" class="sr-only">
+              Digite um nome, skill ou profissão:
+            </label>
+            <input type="search" id="search" placeholder="Buscar" />
+            <button type="submit" aria-label="Pesquisar">
+              <img src="/public/images/search.svg" alt="" aria-hidden="true" />
+            </button>
+          </form>
+          <div class="main__form--tags">
+            <p>UX Designer</p>
+            <p>QA</p>
+            <p>Scrum</p>
+            <p>Desenvolvimento de Carreira</p>
+            <p>Desenvolvedor</p>
+          </div>
       </section>
     </main>
 
     <!-- MODAL que será aberta no primeiro acesso. Para mostrar a modal, será acrescentada a classe "active" -->
-    <div class="modal-wrapper active">
+    <div class="modal-wrapper">
       <div class="modal">
         <h2>Conheça o Orange Share!</h2>
         <p>

@@ -1,3 +1,20 @@
+.main {
+  position: relative;
+}
+
+.main::after {
+  content: '';
+  background: url('/public/images/main-bg.png') no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100vw;
+  max-width: 20rem;
+  height: 16rem;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
 .main__text {
   margin-bottom: 2rem;
 }
@@ -8,6 +25,7 @@
   color: var(--orange);
   margin-top: 3.5rem;
   margin-bottom: 1.5rem;
+  text-indent: 1.5rem;
 }
 
 .main__text--title span {
@@ -29,6 +47,7 @@
 
 .main__form {
   width: 100%;
+  max-width: 45.5rem;
   margin-bottom: 2rem;
 }
 
@@ -51,6 +70,10 @@
 
 .main__form button img {
   height: 1.25rem;
+}
+
+.main__form--tags {
+  display: none;
 }
 
 .main__image img {
@@ -112,7 +135,7 @@
   font-size: 1.125rem;
 }
 
-.main__result--techs p, .profile__techs p {
+.main__result--techs p, .profile__techs p, .main__form--tags p {
   display: inline-block;
   font-size: .75rem;
   font-weight: 700;
@@ -237,4 +260,54 @@
 
 .profile__contact--edit.hide {
   display: none;
+}
+
+@media screen and (min-width: 1280px){
+  .main::after {
+    background: url('/public/images/main-bg-r.png') no-repeat;
+    background-size: cover;
+    background-position: right;
+    max-width: 31rem;
+    height: 38rem;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  .main::before {
+    content: '';
+    background: url('/public/images/main-bg-l.png') no-repeat;
+    background-size: cover;
+    background-position: left;
+    width: 11.625rem;
+    height: 28.5rem;
+    bottom: 5rem;
+    left: 0;
+    position: absolute;
+  }
+
+  .main__text--title {
+    font-size: 2.875rem;
+    line-height: 2.5rem;
+    margin-top: 6.25rem;
+    margin-bottom: 2rem;
+    text-indent: 2rem;
+  }
+
+  .main__text--title span {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .main__text p:nth-child(n+2) {
+    font-size: 1.125rem;
+    margin-bottom: .625rem;
+  }
+
+  .main__form--tags {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.5rem;
+  }
 }
