@@ -1,0 +1,72 @@
+.modal-wrapper.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--overlay);
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal-wrapper .modal {
+  background: var(--login-bg-color);
+  width: min(37rem, 82.5%);
+  margin: auto;
+  border-radius: 0.625rem;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+  .modal-wrapper .modal::after {
+    content: '';
+    background: url('/public/images/image_png_lupa.png') no-repeat;
+    width: 8rem;
+    height: 5.5rem;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 0.625rem;
+  }
+
+  .modal-wrapper .modal h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.32rem;
+    color: var(--black);
+  }
+  
+  .modal-wrapper .modal p {
+    font-size: .75rem;
+    font-weight: normal;
+    margin-bottom: .5rem;
+    color: var(--grey);
+  }
+  
+  .modal-wrapper .modal span {
+    font-weight: 900;
+    color: var(--orange);
+  }
+
+  .modal-wrapper .modal input {
+    border-radius: 0.5rem;
+    border: 2px solid var(--blue);
+    padding: 0.8125rem 1rem;
+    margin-bottom: 2.5rem;
+    outline: none;
+    width: min(18rem, 70%);
+  }
+  
+  .modal .button {
+    width: auto;
+    padding: .625rem 1rem;
+    margin: 1rem 0 3rem;
+    line-height: 1rem;
+  }

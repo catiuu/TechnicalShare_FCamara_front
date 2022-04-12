@@ -9,7 +9,6 @@
 :root {
   /* Cores principais */
   --orange: #ff4400;
-  /* --blue: #36357e; */
   --white: #ffffff;
   --login-bg-color: #FFF5EE;
   --login-legend: #414099;
@@ -18,6 +17,7 @@
   --card-border: #E2E2E2;
   --grey: #79797b;
   --black: #303033;
+  --overlay: hsla(217, 62%, 4%, 0.8);
 
   /* Fontes */
   --main-font: 'Metropolis', 'Montserrat', sans-serif;
