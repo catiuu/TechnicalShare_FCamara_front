@@ -1,0 +1,240 @@
+.main__text {
+  margin-bottom: 2rem;
+}
+
+.main__text--title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--orange);
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.main__text--title span {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.main__text p:nth-child(n+2) {
+  font-size: .75rem;
+  text-align: center;
+  color: var(--grey);
+}
+
+.main__text p:nth-child(3) {
+  font-weight: 600;
+}
+
+.main__form {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.main__form form {
+  display: flex;
+}
+
+.main__form input {
+  border-radius: 3.45rem 0 0 3.45rem;
+  border: 1px solid rgba(51, 51, 51, 0.259);
+  background: var(--white);
+  padding: 1rem 1.5rem;
+}
+
+.main__form button {
+  border-radius: 0 3.45rem 3.45rem 0;
+  background: var(--button-color);
+  padding: 1rem 1.5rem;
+}
+
+.main__form button img {
+  height: 1.25rem;
+}
+
+.main__image img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.main__result {
+  margin: 0 1.5rem 1.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.main__result--cards {
+  display: block;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.main__result--card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "photo name"
+    ". info"
+    ". link";
+  border-top: 1px solid var(--card-border);
+  padding: .5rem .5rem;
+}
+
+.main__result--image img {
+  grid-area: photo;
+  width: 2.5rem;
+  clip-path: circle();
+  object-fit: cover;
+  margin-right: .5625rem;
+}
+
+.main__result--user {
+  grid-area: name;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.main__result--user .main__result--user_job, .profile__user--bio {
+  font-size: .75rem;
+  font-weight: 400;
+  opacity: .6;
+}
+
+.main__result--techs {
+  grid-area: info;
+  padding-top: 1rem;
+  font-size: 1.125rem;
+}
+
+.main__result--techs p, .profile__techs p {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  background: var(--light-grey);
+  color: var(--button-color);
+  line-height: .875rem;
+  padding: .375rem .75rem;
+  border-radius: 1.375rem;
+  margin-bottom: .5rem;
+}
+
+.main__result--user p, .main__result--info_contact p:first-child {
+  font-weight: 700;
+}
+
+.main__result--info_techs {
+  display: inline-block;  
+}
+
+.main__result--link {
+  grid-area: link;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main__result--link a, .profile__contact--slack, .profile__contact--teams, .profile__contact--edit {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--orange);
+  padding: .5rem .5625rem;
+  border: 1px solid var(--orange);
+  border-radius: 1.25rem;
+  margin-top: .625rem;
+}
+
+.profile__contact--teams {
+  color: var(--button-color);
+  border: 1px solid var(--button-color);
+  margin-left: .5rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "photo user"
+    "tech tech"
+    "contact contact";
+  width: 100%;
+  background: var(--white);
+  padding: 0 .5rem;
+  margin: 3rem 0 0;
+}
+
+.profile__image img {
+  grid-area: photo;
+  width: 5rem;
+  margin-right: 1rem;
+  clip-path: circle();
+}
+
+.profile__user {
+  grid-area: user;
+  padding-bottom: .5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.profile__user--name {
+  font-weight: 700;
+  font-size: .875rem;
+  color: var(--black);
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+
+.profile__user--job, .profile__user--pronouns {
+  font-weight: 300;
+  font-size: .75rem;
+  color: var(--black);
+  line-height: 1rem;
+  margin-bottom: .25rem;
+}
+
+.profile__user--pronouns {
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.profile__techs {
+  grid-area: tech;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.profile__techs h2, .profile__contact h2 {
+  font-size: .75rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+.profile__contact {
+  grid-area: contact;
+}
+
+.profile__contact--links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__contact div {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile__contact a {
+  display: inline;
+}
+
+.profile__contact img {
+  vertical-align: middle;
+}
+
+.profile__contact--edit.hide {
+  display: none;
+}

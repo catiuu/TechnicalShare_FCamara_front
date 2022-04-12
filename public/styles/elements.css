@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--white);
+    padding: 3.125rem 1rem;
+    width: 100%;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: .5625rem 1rem;
+    box-shadow: 0px 2px 4px rgba(171, 171, 171, 0.5);
+    background: var(--white);
+    z-index: 100;
+  }
+  
+  .header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__logo {
+    height: 2rem;
+  }
+  
+  .header__user {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: var(--black);
+    font-weight: 700;
+    font-size: .875rem;
+  }
+  
+  .header__user img {
+    width: 1.875rem;
+  }
+  
+  .button {
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: 700;
+    color: var(--white);
+    width: 100%;
+    padding: .75rem 0;
+    background: var(--button-color);
+    border-radius: .5rem;
+  }
+  
+  /* Screen reader only: elementos de acessibilidade que não aparecem visualmente, mas devem ser lidos pelo NVDA devem possuir esta classe */
+  .sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .button {
+      font-size: 1rem;
+    }
+  }
