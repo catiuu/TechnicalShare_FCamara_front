@@ -14,7 +14,7 @@
     padding: .5625rem 1rem;
     box-shadow: 0px 2px 4px rgba(171, 171, 171, 0.5);
     background: var(--white);
-    z-index: 100;
+    z-index: 10;
   }
   
   .header nav {
@@ -27,7 +27,7 @@
     height: 2rem;
   }
   
-  .header__user {
+  .header__user a {
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -68,4 +68,29 @@
     .button {
       font-size: 1rem;
     }
+
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 1rem 2rem;
+      box-shadow: 0px 2px 4px rgba(171, 171, 171, 0.5);
+      background: var(--white);
+      z-index: 10;
+    }
+
+    .header__logo {
+      height: 3.5rem;
+    }
+
+    .header__user {
+      gap: 1.875rem;
+      font-size: 1rem;
+    }
+
+    .header__user img {
+      width: 3.25rem;
+    }
+  
+  
   }
