@@ -112,15 +112,12 @@
     width: 47.5rem;
   }
 
-  .modal-wrapper .modal::before {
-    content: '';
-    background: url('/images/foguete.png') no-repeat;
-    width: 12.32rem;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    border-radius: 1.875rem;
+  .modal-wrapper .modal {
+    background: var(--login-bg-color);
+    background-image: url('/images/foguete.png');
+    background-size: 12.32rem 37.25rem;
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 
   .modal-wrapper .modal::after {
