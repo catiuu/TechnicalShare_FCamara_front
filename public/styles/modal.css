@@ -16,8 +16,17 @@
   opacity: 0;
 }
 
-.modal-wrapper .modal {
+.modal-wrapper .modal, .modal-wrapper .login__modal {
   background: var(--login-bg-color);
+  width: min(35rem, 82.5%);
+  margin: auto;
+  border-radius: 0.625rem;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.modal-wrapper .login__modal {
+  background: var(--white);
   width: min(35rem, 82.5%);
   margin: auto;
   border-radius: 0.625rem;
@@ -38,7 +47,7 @@
   border-radius: 0.625rem;
 }
 
-.modal-wrapper .modal h2 {
+.modal-wrapper .modal h2, .modal-wrapper .login__modal h2 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -46,11 +55,21 @@
   color: var(--black);
 }
 
-.modal-wrapper .modal p {
+.modal-wrapper .modal p, .modal-wrapper .login__modal p {
   font-size: .75rem;
   font-weight: normal;
   margin-bottom: .5rem;
   color: var(--grey);
+}
+
+.modal-wrapper .login__modal p:nth-child(2) {
+  color: var(--orange);
+  margin-bottom: 1rem;
+}
+
+.modal-wrapper .login__modal p:last-child {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .modal-wrapper .modal span {
@@ -74,8 +93,20 @@
   line-height: 1rem;
 }
 
+.login__modal div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.login__modal a {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
 @media screen and (min-width: 1280px) {
-  .modal-wrapper .modal {
+  .modal-wrapper .modal, .modal-wrapper .login__modal {
     border-radius: 1.875rem;
     padding: 9rem 6rem;
     width: 47.5rem;
@@ -103,7 +134,7 @@
     border-radius: 1.875rem;
   }
 
-  .modal-wrapper .modal h2 {
+  .modal-wrapper .modal h2, .modal-wrapper .login__modal h2 {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     line-height: 1.625rem;
@@ -115,11 +146,22 @@
     line-height: 2rem;
     max-width: 26rem;
   }
+
+  .modal-wrapper .login__modal p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    line-height: 2rem;
+  }
   
   .modal .button {
     padding: .75rem 2.625rem;
     margin: .5rem 0 0;
     line-height: 1rem;
+  }
+
+  .login__modal a img {
+    width: 1.25rem;
+    height: 1.25rem;
   }
   
 }

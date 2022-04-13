@@ -74,5 +74,40 @@
     <footer class="login__footer">
       <img src="/public/images/orange-footer.svg" alt="" />
     </footer>
+
+    <!-- MODAL que será aberta caso seja clicado o "esqueci a senha". -->
+    <div class="modal-wrapper">
+      <div class="login__modal">
+        <div>
+          <h2>Ei! Esqueceu sua senha?</h2>
+          <a href="#" role="button" aria-label="Fechar modal">
+            <img src="/public/images/sair.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+        <p>Fique tranquilo!</p>
+        <p>
+          Para redefinir sua senha basta ir em seu e-mail Corporativo da FCamara no Office Business.
+        </p>
+        <p>
+          Redefina a senha e logo em seguida retorne à plataforma da Orange Share.
+        </p>
+        <p>Viu como é fácil?</p>
+      </div>
+    </div>
+    
+    <!-- Script temporário apenas para teste da modal -->
+    <script>
+      let forgot = document.querySelector('.login__reminder a')
+      let modal = document.querySelector('.modal-wrapper')
+      let button = document.querySelector('.modal-wrapper a')
+
+      forgot.addEventListener('click', () => {
+        modal.classList.add('active')
+      })
+
+      button.addEventListener('click', () => {
+        modal.classList.remove('active')
+      })
+    </script>
   </body>
 </html>
