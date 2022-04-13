@@ -22,6 +22,10 @@ function getUsers() {
         }
 
         userCard.innerHTML = `
+      <div class="main__result--phew">
+        <p>Ufa!</p>
+        <p>Achamos alguém para te ajudar.</p>
+      </div>
       <div class="main__result--image">
         <img src="/public/images/${user.id}.png">
       </div>

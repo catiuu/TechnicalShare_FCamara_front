@@ -91,6 +91,36 @@
   height: auto;
 }
 
+.main__result--phew{
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+  max-width: 24.32rem;
+}
+
+.main__result--phew p:first-child {
+  font-size: .875rem;
+  font-weight: 700;
+  padding: .5rem;
+  color: var(--white);
+  background: var(--orange);
+  width: fit-content;
+  border-radius: .925rem .925rem .925rem 0;
+  margin-bottom: .25rem;
+}
+
+.main__result--phew p:last-child {
+  font-size: .875rem;
+  font-weight: 700;
+  justify-self: end;
+  padding: .5rem;
+  color: var(--orange);
+  background: var(--white);
+  width: fit-content;
+  border: 1px solid var(--orange);
+  border-radius: .925rem 0 .925rem .925rem;
+}
+
 .main__result--cards {
   display: block;
   width: 100%;
@@ -312,6 +342,18 @@
     justify-content: center;
     gap: .5rem;
     margin-top: 1.5rem;
+  }
+
+  .main__result--phew p:first-child {
+    font-size: 1.125rem;
+    padding: .5rem;
+    margin-bottom: .5rem;
+  }
+  
+  .main__result--phew p:last-child {
+    font-size: 1.125rem;
+    justify-self: end;
+    padding: .5rem 1rem;
   }
 
   .profile {
