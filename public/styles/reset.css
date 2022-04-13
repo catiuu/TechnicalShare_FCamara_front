@@ -8,6 +8,7 @@
 
 :root {
   /* Cores principais */
+  --red: #900000;
   --orange: #ff4400;
   --white: #ffffff;
   --login-bg-color: #FFF5EE;

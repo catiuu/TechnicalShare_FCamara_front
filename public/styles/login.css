@@ -89,11 +89,31 @@ body {
   margin-bottom: 1rem;
 }
 
-.login__form input[type="password"] {
+.login__form--pass {
   margin-bottom: 2.5rem;
 }
 
-.login__form button {
+.login__form input + span {
+  display: none;
+}
+
+.login__form input.error {
+  outline: none;
+  border: 1px solid var(--red);
+  margin-bottom: .5rem;
+}
+
+.login__form input.error + span {
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: .75rem;
+  gap: .5rem;
+}
+
+.login__form div {
   position: relative;
 }
 
@@ -101,8 +121,9 @@ body {
   height: fit-content;
   width: fit-content;
   background-color: transparent;
-  top: 6.4rem;
-  right: .6875rem;
+  padding: .5rem .5rem;
+  top: 0;
+  right: 0;
   position: absolute;
 }
 
@@ -187,10 +208,7 @@ body {
   }
 
   .login__form--viewpass {
-    height: 1rem;
-    width: 1rem;
-    top: 9.75rem;
-    right: 1rem;
+    padding: .75rem 1rem;
   }
 
   .login__footer {

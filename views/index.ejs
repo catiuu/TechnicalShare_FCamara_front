@@ -33,31 +33,42 @@
             <legend class="login__form--legend">Conecte-se!</legend>
             <p>Faça parte dessa comunidade</p>
             <label for="email" class="sr-only"
-              >Digite seu email corporativo</label
-            >
+              >Digite seu email corporativo
+            </label>
             <input
               type="email"
               name="email"
               id="email"
+              data-type="email"
               placeholder="E-mail Corporativo"
+              required
             />
-            <label for="password" class="sr-only">Digite sua senha</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Senha"
-            />
-            <!-- Usar role para redesignar a função de âncora para botão. Aria-label para acessibilidade. -->
-            <a
-              href="#"
-              role="button"
-              aria-label="Visualizar senha"
-              class="login__form--viewpass"
-            >
-              <!-- Aria-hidden e alt vazio para evitar que a imagem seja lida pelo NVDA (imagem apenas ilustrativa) -->
-              <img src="/images/el_eye-close.svg" alt="" aria-hidden="true" />
-            </a>
+            <span class="login__form--error" role="alert"></span>
+
+            <div>
+              <label for="password" class="sr-only">Digite sua senha</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="login__form--pass"
+                data-type="pass"
+                placeholder="Senha"
+                required
+              />
+              <span role="alert"></span>
+
+              <!-- Usar role para redesignar a função de âncora para botão. Aria-label para acessibilidade. -->
+              <a
+                href="#"
+                role="button"
+                aria-label="Visualizar senha"
+                class="login__form--viewpass"
+              >
+                <!-- Aria-hidden e alt vazio para evitar que a imagem seja lida pelo NVDA (imagem apenas ilustrativa) -->
+                <img src="/images/el_eye-close.svg" alt="" aria-hidden="true" />
+              </a>
+            </div>
             <button type="submit" class="button">Entrar</button>
           </fieldset>
         </form>
@@ -95,6 +106,7 @@
     </div>
 
     <!-- Script temporário apenas para teste da modal -->
+    <script type="module" src="/scripts/index.js"></script>
     <script>
       let forgot = document.querySelector('.login__reminder a')
       let modal = document.querySelector('.modal-wrapper')
