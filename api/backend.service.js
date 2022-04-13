@@ -12,7 +12,7 @@ class Service {
 
   async updateProfile(newProfile) {
     const { data } = await axios.patch(
-      "http://localhost:3000/user/profile",
+      "http://localhost:3000/user/update",
       newProfile,
     );
     return data;
@@ -27,7 +27,7 @@ class Service {
   }
 
   async addSkill(userId, skillId) {
-    const { data } = await axios.post("http://localhost:3000/user/addskills", {
+    const { data } = await axios.post("http://localhost:3000/user/addskill", {
       userId: userId,
       skillId: skillId,
     });
@@ -36,7 +36,7 @@ class Service {
 
   async removeSkill(userId, skillId) {
     const { data } = await axios.post(
-      "http://localhost:3000/user/removeskills",
+      "http://localhost:3000/user/removeskill",
       {
         userId: userId,
         skillId: skillId,
@@ -47,6 +47,7 @@ class Service {
 
   async findUserById(id) {
     const { data } = await axios.post("http://localhost:3000/user/id", {
+      //headers: { Authorization: `Bearer ${token}` },
       id: id,
     });
     return data;

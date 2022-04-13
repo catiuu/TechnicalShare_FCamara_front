@@ -1,4 +1,6 @@
 const userService = require("../services/user.services");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 class Controller {
   async login(req, res) {
@@ -6,17 +8,37 @@ class Controller {
       const { email, password } = req.body;
       const user = await userService.login(email, password);
 
-      res.json(user);
+      if (!user) {
+        return res
+          .status(400)
+          .json({ mensagem: "E-mail ou senha não conferem." });
+      }
+      // TOKEN
+      jwt.sign(
+        { id: user.id },
+        process.env.SECRET_JWT,
+        {
+          expiresIn: "1h",
+        },
+        (err, token) => {
+          if (err) {
+            res.status(400).json("Falha interna!");
+          } else {
+            res.status(200).json({ token: token });
+          }
+        },
+      );
     } catch (error) {
       res.status(500).json(error);
     }
   }
 
   async updateProfile(req, res) {
+    console.log("1");
     try {
-      const { id, jobTitle, aboutMe, pronouns } = req.body;
+      const { userId, jobTitle, aboutMe, pronouns } = req.body;
       const response = await userService.updateProfile({
-        id,
+        userId,
         jobTitle,
         aboutMe,
         pronouns,
@@ -49,8 +71,6 @@ class Controller {
   }
 
   async removeSkill(req, res) {
-    console.log("FRONT CONTROLLER");
-
     try {
       const { userId, skillId } = req.body;
       const response = await userService.removeSkill(userId, skillId);
