@@ -8,59 +8,24 @@
 
 :root {
   /* Cores principais */
-  --red: #900000;
   --orange: #ff4400;
-  --white: #ffffff;
-  --login-bg-color: #FFF5EE;
-  --login-legend: #414099;
-  --button-color: #4B4FA1;
-  --light-grey: #F3F4F9;
-  --card-border: #E2E2E2;
-  --grey: #79797b;
-  --black: #303033;
-  --overlay: hsla(217, 62%, 4%, 0.8);
+  --blue: #36357e;
+  --white: #fff;
 
   /* Fontes */
-  --main-font: 'Metropolis', 'Montserrat', sans-serif;
+  --main-font: 'Metropolis', sans-serif;
+  /* --montserrat */
 }
 
 body {
-  display: flex;
-  height: 100vh;
-  font-family: var(--main-font);
-  line-height: 1rem;
-  overflow-x: hidden;
-}
-
-body, button, input, textarea, select {
   font-family: var(--main-font);
 }
 
-input, textarea, select {
-  display: block;
-  width: 100%;
-  background: var(--light-grey);
-  padding: .6875rem .5rem;
-  border-radius: .375rem;
+body div {
+  background: var(--orange);
+  color: var(--white);
 }
 
-a, button {
-  cursor: pointer;
-}
-
-::placeholder {
-  font-size: .75rem;
-  font-weight: 400;
-  color: var(--black);
-  opacity: .6;
-}
-
-@media screen and (min-width: 1280px) {
-  ::placeholder{
-    font-size: 1rem;
-  }
-
-  input, textarea, select {
-    padding: .75rem 1rem;
-  }
+body div + div {
+  background: var(--blue);
 }
