@@ -1,5 +1,5 @@
 // Quando fizer a validação do perfil, inserir o checklength na importação abaixo
-import {validate} from './validation.js'
+// import {validate} from './validation.js'
 
 // Validação dos campos de login
 const loginInputs = document.querySelectorAll('[data-type]')
@@ -21,6 +21,10 @@ viewPass.addEventListener('click', () => {
     passInput.type = 'password'
   }
 })
+
+// Pegar dados do usuário logado
+const id = document.querySelector('.header__user a')
+console.log(id)
 
 // Rearranjar código para validação da edição de cadastro
 // const contactInputs = document.querySelectorAll('[data-type="contact"]')

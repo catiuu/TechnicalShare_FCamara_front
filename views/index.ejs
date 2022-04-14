@@ -28,7 +28,7 @@
           alt="Logomarca da plataforma"
           class="login__logo"
         />
-        <form action="/home" class="login__form">
+        <form action="/home" method="POST" class="login__form">
           <fieldset>
             <legend class="login__form--legend">Conecte-se!</legend>
             <p>Faça parte dessa comunidade</p>
@@ -40,6 +40,7 @@
               name="email"
               id="email"
               data-type="email"
+              value="mario.bros@email.com"
               placeholder="E-mail Corporativo"
               required
             />
@@ -53,6 +54,7 @@
                 id="password"
                 class="login__form--pass"
                 data-type="pass"
+                value="12345"
                 placeholder="Senha"
                 required
               />

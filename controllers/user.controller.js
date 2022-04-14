@@ -5,8 +5,8 @@ const jwt = require("jsonwebtoken");
 class Controller {
   async login(req, res) {
     try {
-      const { email, password } = req.body;
-      const user = await userService.login(email, password);
+      // const { email, password } = req.body;
+      const user = await userService.login("mario.bros@email.com", "12345");
 
       if (!user) {
         return res
@@ -24,7 +24,7 @@ class Controller {
           if (err) {
             res.status(400).json("Falha interna!");
           } else {
-            res.status(200).json({ token: token });
+            res.render('main', {title: 'Orange Share | Home', page: 'home'})
           }
         },
       );
@@ -82,9 +82,29 @@ class Controller {
 
   async findUserById(req, res) {
     try {
-      const { id } = req.body;
+      const id = req.params.id;
       const response = await userService.findUserById(id);
-      res.status(200).json(response);
+      const user = response[id - 1]
+      const userSkills = user.Skills
+      let skills = ''
+
+      for (let i = 0; i < userSkills.length; i++) {
+        skills += `<p>${userSkills[i].name}</p>`
+      }
+        
+      await res.render('main', {
+        title: 'Orange Share | Seu Perfil',
+        page: 'logged-user',
+        userName: user.fullName,
+        userJob: user.jobTitle,
+        userPronouns: user.pronouns,
+        userBio: user.aboutMe,
+        userSkills: skills,
+        image: user.id
+      })
+
+      // console.log(userSkills.length)
+
     } catch (error) {
       res.status(500).json(error);
     }

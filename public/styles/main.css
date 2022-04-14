@@ -96,6 +96,7 @@
   grid-auto-flow: row;
   width: 100%;
   max-width: 24.32rem;
+  margin:0 auto;
 }
 
 .main__result--phew p:first-child {
@@ -119,6 +120,8 @@
   width: fit-content;
   border: 1px solid var(--orange);
   border-radius: .925rem 0 .925rem .925rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
 }
 
 .main__result--cards {
@@ -138,6 +141,8 @@
     ". link";
   border-top: 1px solid var(--card-border);
   padding: .5rem .5rem;
+  max-width: 45.5rem;
+  margin: 0 auto;
 }
 
 .main__result--image img {
@@ -347,13 +352,49 @@
   .main__result--phew p:first-child {
     font-size: 1.125rem;
     padding: .5rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   
   .main__result--phew p:last-child {
     font-size: 1.125rem;
     justify-self: end;
     padding: .5rem 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .main__result--card {
+    padding: 1rem 1.875rem;
+  }
+  
+  .main__result--image img {
+    width: 5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .main__result--user_name {
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+  }
+
+  .main__result--user .main__result--user_job {
+    font-size: 1rem;
+  }
+
+  .main__result--techs {
+    padding: 0;
+  }
+  
+  .main__result--techs p {
+    font-size: .875rem;
+    padding: .5rem;
+    border-radius: 1.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .main__result--link a {
+    font-size: 1rem;
+    padding: .75rem 2.125rem;
+    border-radius: 1.875rem;
   }
 
   .profile {
@@ -412,6 +453,7 @@
 
   .profile__techs p {
     margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   .profile__contact--slack, .profile__contact--teams {

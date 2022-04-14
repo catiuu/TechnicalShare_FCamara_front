@@ -5,7 +5,7 @@ const auth = require("../middlewares/authToken");
 const checkUser = require("../middlewares/checkUser");
 
 // Faz login do Usuário e retorna um token
-router.post("/login", userController.login);
+// router.post("/login", userController.login);
 // Rota de atualizar Perfil do usuário
 router.patch("/update", auth, checkUser, userController.updateProfile);
 //Rota de adicionar Skill do usuário

@@ -1,9 +1,10 @@
 const backend = require("../api/backend.service");
 const axios = require("axios");
+const urlApi = "https://technicalsaher-api.herokuapp.com"
 
 class Service {
   async login(email, password) {
-    const { data } = await axios.post("http://localhost:3000/user/login", {
+    const { data } = await axios.post(`${urlApi}/user/login`, {
       email: email,
       password: password,
     });
@@ -46,8 +47,7 @@ class Service {
   }
 
   async findUserById(id) {
-    const { data } = await axios.post("http://localhost:3000/user/id", {
-      //headers: { Authorization: `Bearer ${token}` },
+    const { data } = await axios.get(`${urlApi}/admin/users/skills`, {
       id: id,
     });
     return data;

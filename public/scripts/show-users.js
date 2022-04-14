@@ -1,13 +1,21 @@
 // Declaração de variáveis
 const cards = document.querySelector('.main__result--cards')
+const phewMsg = `
+  <div class="main__result--phew">
+    <p>Ufa!</p>
+    <p>Achamos alguém para te ajudar.</p>
+  </div>
+`
+
 
 // Buscar informação dos users no banco de dados
 function getUsers() {
-  const apiUrl = 'http://localhost:3000/admin/users/skills'
-
+  const apiUrl = 'https://technicalsaher-api.herokuapp.com/admin/users/skills'
+  
   fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
+  .then(response => response.json())
+  .then(data => {
+      cards.innerHTML = phewMsg
       data.forEach(user => {
         let userSkills = ''
         const userCard = document.createElement('div')
@@ -22,12 +30,8 @@ function getUsers() {
         }
 
         userCard.innerHTML = `
-      <div class="main__result--phew">
-        <p>Ufa!</p>
-        <p>Achamos alguém para te ajudar.</p>
-      </div>
       <div class="main__result--image">
-        <img src="/public/images/${user.id}.png">
+        <img src="/images/${user.id}.png">
       </div>
       <div class="main__result--user">
         <p class="main__result--user_name" data-filter="userName">${user.fullName}</p>
