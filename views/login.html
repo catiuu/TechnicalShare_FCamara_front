@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Technical Share FCamara" />
+    <meta
+      name="description"
+      content="Aplicação desenvolvida durante o hackathon do Programa de Formação Season 3."
+    />
+    <meta name="author" content="Squad-3 do Programa de Formação Season 3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <title>Technical Share</title>
+    <link rel="stylesheet" href="/public/styles/global.css" />
+    <link rel="stylesheet" href="/public/styles/login.css" />
+  </head>
+  <body>
+    <main>
+      <section class="login">
+        <!-- Título da página, "visível" apenas para leitores de tela -->
+        <h1 class="sr-only">Technical Share - Login</h1>
+        <img
+          src="/public/images/share-logo.svg"
+          alt="Logomarca da plataforma"
+          class="login__logo"
+        />
+        <form action="main.html" class="login__form">
+          <fieldset>
+            <legend class="login__form--legend">Conecte-se!</legend>
+            <p>Faça parte dessa comunidade</p>
+            <label for="email" class="sr-only"
+              >Digite seu email corporativo</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail Corporativo"
+            />
+            <label for="password" class="sr-only">Digite sua senha</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Senha"
+            />
+            <!-- Usar role para redesignar a função de âncora para botão. Aria-label para acessibilidade. -->
+            <a
+              href="#"
+              role="button"
+              aria-label="Visualizar senha"
+              class="login__form--viewpass"
+            >
+              <!-- Aria-hidden e alt vazio para evitar que a imagem seja lida pelo NVDA (imagem apenas ilustrativa) -->
+              <img
+                src="/public/images/el_eye-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </a>
+            <button type="submit" class="button">Entrar</button>
+          </fieldset>
+        </form>
+        <div class="login__reminder">
+          <p>Seu login é seu e-mail do Office Business</p>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="login__footer">
+      <img src="/public/images/orange-footer.svg" alt="" />
+    </footer>
+
+    <!-- MODAL que será aberta caso seja clicado o "esqueci a senha". -->
+    <div class="modal-wrapper">
+      <div class="login__modal">
+        <div>
+          <h2>Ei! Esqueceu sua senha?</h2>
+          <a href="#" role="button" aria-label="Fechar modal">
+            <img src="/public/images/sair.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+        <p>Fique tranquilo!</p>
+        <p>
+          Para redefinir sua senha basta ir em seu e-mail Corporativo da FCamara no Office Business.
+        </p>
+        <p>
+          Redefina a senha e logo em seguida retorne à plataforma da Orange Share.
+        </p>
+        <p>Viu como é fácil?</p>
+      </div>
+    </div>
+    
+    <!-- Script temporário apenas para teste da modal -->
+    <script>
+      let forgot = document.querySelector('.login__reminder a')
+      let modal = document.querySelector('.modal-wrapper')
+      let button = document.querySelector('.modal-wrapper a')
+
+      forgot.addEventListener('click', () => {
+        modal.classList.add('active')
+      })
+
+      button.addEventListener('click', () => {
+        modal.classList.remove('active')
+      })
+    </script>
+  </body>
+</html>

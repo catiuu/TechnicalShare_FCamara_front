@@ -39,7 +39,7 @@
   .header__user img {
     width: 1.875rem;
     clip-path: circle();
-  }
+}
 
   .back {
     position: absolute;
@@ -102,10 +102,10 @@
     .header__user img {
       width: 3.25rem;
     }
-  
+    
     .back {
       position: absolute;
       top: 7.75rem;
       left: 7.875rem;
     }
-  }
+   
