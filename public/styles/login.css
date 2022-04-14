@@ -97,15 +97,19 @@ body {
 .login__button {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: .75rem 4rem;
-  padding-left: 1.25rem;
+  gap: .5rem;
+  padding: .75rem 1.625rem;
+  padding-left: 1rem;
   background: var(--white);
   border: 2px solid var(--button-color);
   border-radius: 1.875rem;
-  font-size: 1rem;
+  font-size: .875rem;
   font-weight: 700;
   color:var(--button-color);
+}
+
+.login__button img {
+  height: 1rem;
 }
 
 .login__reminder {
@@ -194,5 +198,16 @@ body {
 
   .login__footer {
     margin-top: 2rem;
+  }
+
+  .login__button {
+    gap: 1.25rem;
+    padding: .75rem 4rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .login__button img {
+    height: 1.875rem;
   }
 }
