@@ -50,15 +50,16 @@ class Controller {
     }
   }
 
-  async findUsers(req, res) {
-    try {
-      const { searchInput } = req.body;
-      const response = await userService.findUsers(searchInput);
-      res.json(response);
-    } catch (error) {
-      res.status(500).json(error);
-    }
-  }
+  // async findUsers(req, res) {
+  //   try {
+  //     const searchInput = req.query.searchInput;
+  //     console.log(searchInput)
+  //     // const apiUrl = 'https://technicalsaher-api.herokuapp.com/admin/users/skills'
+  //     // res.json(response);
+  //   } catch (error) {
+  //     res.status(500).json(error);
+  //   }
+  // }
 
   async addSkill(req, res) {
     try {

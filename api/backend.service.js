@@ -20,7 +20,7 @@ class Service {
   }
 
   async findUsers(searchInput) {
-    const { data } = await axios.post(`http://localhost:3000/user/search`, {
+    const { data } = await axios.post(`${urlApi}/admin/users/skills`, {
       searchInput: searchInput,
     });
 

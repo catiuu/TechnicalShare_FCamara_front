@@ -99,6 +99,10 @@
   margin:0 auto;
 }
 
+.main__result--phew.hidden {
+  display: none;
+}
+
 .main__result--phew p:first-child {
   font-size: .875rem;
   font-weight: 700;
@@ -143,6 +147,10 @@
   padding: .5rem .5rem;
   max-width: 45.5rem;
   margin: 0 auto;
+}
+
+.main__result--card.hidden {
+  display: none;
 }
 
 .main__result--image img {

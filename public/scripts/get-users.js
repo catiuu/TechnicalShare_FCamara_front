@@ -1,15 +1,12 @@
-// Declaração de variáveis
-const cards = document.querySelector('.main__result--cards')
-const phewMsg = `
-  <div class="main__result--phew">
-    <p>Ufa!</p>
-    <p>Achamos alguém para te ajudar.</p>
-  </div>
-`
-
-
-// Buscar informação dos users no banco de dados
-function getUsers() {
+(function getUsers() {
+  // Declaração de variáveis
+  const cards = document.querySelector('.main__result--cards')
+  const phewMsg = `
+    <div class="main__result--phew hidden">
+      <p>Ufa!</p>
+      <p>Achamos alguém para te ajudar.</p>
+    </div>
+  `
   const apiUrl = 'https://technicalsaher-api.herokuapp.com/admin/users/skills'
   
   fetch(apiUrl)
@@ -20,13 +17,13 @@ function getUsers() {
         let userSkills = ''
         const userCard = document.createElement('div')
         userCard.classList.add('main__result--card')
+        userCard.classList.add('hidden')
         userCard.setAttribute('data-id', `${user.id}`)
 
         for (let i = 0; i < user.Skills.length; i++) {
           userSkills += `
           <p>${user.Skills[i].name}</p>
         `
-          console.log(userSkills)
         }
 
         userCard.innerHTML = `
@@ -45,6 +42,7 @@ function getUsers() {
       </div>
       `
         cards.appendChild(userCard)
+        
       })
     })
     .catch(
@@ -52,6 +50,4 @@ function getUsers() {
         (cards.innerHTML =
           '<p>Não foi possível recuperar os dados de usuário.</p>')
     )
-}
-
-getUsers()
+})()

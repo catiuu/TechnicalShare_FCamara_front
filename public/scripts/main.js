@@ -1,12 +1,8 @@
-import loadProfile from "./load-profile.js"
-
-const menuBtn = document.querySelector('.header__user a')
-const backBtn = document.querySelector('.back a')
-
-// Carregar dados do usuário na página de perfil logado
-menuBtn.addEventListener('click', loadProfile)
+const search = document.querySelector('#search')
+const backBtn = document.querySelector('.back')
 
 // Voltar página
 backBtn.addEventListener('click', ()=>{
-    history.back()
+    console.log(backBtn)
+    window.history.back()
 })

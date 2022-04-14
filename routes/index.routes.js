@@ -7,15 +7,12 @@ router.get('/', function (req, res, next) {
   res.render('index', {title: 'Orange Share'})
 })
 
-router.post('/home', userController.login)
+router.get('/home', function(req, res, next) {
+  res.render('main', {title: 'Orange Share | Home', page: 'home'})
+})
 
 /* GET logged user page */
 router.get('/logged-user/:id', userController.findUserById)
-
-/* GET home page */
-// router.get('/home', function (req, res, next) {
-//   res.render('main', {title: 'Orange Share | Home', page: 'home'})
-// })
 
 /* GET search page */
 router.get('/search', function (req, res, next) {

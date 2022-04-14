@@ -11,7 +11,7 @@ router.patch("/update", auth, checkUser, userController.updateProfile);
 //Rota de adicionar Skill do usuário
 router.post("/addskill", auth, checkUser, userController.addSkill);
 // Rota para deletar uma skill do usuário
-router.post("/search", auth, userController.findUsers);
+// router.post("/search", auth, userController.findUsers);
 // Busca lista de usuários com base no parâmetro de busca
 router.post("/removeskill", auth, checkUser, userController.removeSkill);
 // Busca um usuário pelo id
