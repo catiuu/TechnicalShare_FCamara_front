@@ -312,10 +312,10 @@
   .main::after {
     background: url('/images/main-bg-r.png') no-repeat;
     background-size: cover;
-    background-position: right;
+    background-position: top;
     max-width: 31rem;
-    height: 38rem;
-    bottom: 0;
+    height: 6rem;
+    top: 9.125rem;
     right: 0;
     position: absolute;
   }
@@ -325,7 +325,7 @@
     background: url('/images/main-bg-l.png') no-repeat;
     background-size: cover;
     background-position: left;
-    width: 11.625rem;
+    width: 8.5rem;
     height: 28.5rem;
     bottom: 5rem;
     left: 0;
