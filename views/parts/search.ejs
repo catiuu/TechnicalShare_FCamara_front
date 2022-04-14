@@ -1,0 +1,23 @@
+<main class="container">
+  <section class="main__text">
+    <p class="main__text--title"></p>
+  </section>
+
+  <section class="main__form">
+    <form action="/search">
+      <label for="search" class="sr-only">
+        Digite um nome, skill ou profissão:
+      </label>
+      <input type="search" id="search" placeholder="Buscar" />
+      <button type="submit" aria-label="Pesquisar">
+        <img src="/images/search.svg" alt="" aria-hidden="true" />
+      </button>
+    </form>
+  </section>
+
+  <section class="main__result">
+    <div class="main__result--cards" id="filter"></div>
+  </section>
+</main>
+
+<script src="/scripts/show-users.js"></script>

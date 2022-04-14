@@ -1,0 +1,217 @@
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--login-bg-color);
+  padding: 0 .8125rem;
+  overflow: hidden;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  width: auto;
+  max-width: 26rem;
+  box-shadow: 0px 4px 4px rgba(172, 172, 172, 0.25);
+  border-radius: .625rem;
+  padding: 2.5rem 2rem;
+  position: relative;
+}
+
+.login::before {
+  content: '';
+  width: 5rem;
+  height: 4.75rem;
+  background: url('/images/pontilhados.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -3.31rem;
+  left: -1.75rem;
+  z-index: -1;
+}
+
+.login::after {
+  content: '';
+  width: 5.125rem;
+  height: 3.375rem;;
+  background: url('/images/ondas-b.svg') no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: -2.3rem;
+  right: -0.8125rem;
+  z-index: -1;
+}
+
+.login__logo {
+  display: block;
+  height: 2.9375rem;
+  margin-bottom: 1rem;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__form fieldset, .login__form p {
+  text-align: center;
+  position: relative;
+}
+
+
+.login__form--legend {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.3125rem;
+  color: var(--login-legend);
+}
+
+.login__form p, .login__reminder p {
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--black);
+  opacity: .6;
+  margin-bottom: 1.5rem;
+}
+
+.login__form label {
+  font-size: .875rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+
+.login__form input[type="email"] {
+  margin-bottom: 1rem;
+}
+
+.login__form--pass {
+  margin-bottom: 2.5rem;
+}
+
+.login__form input + span {
+  display: none;
+}
+
+.login__form input.error {
+  outline: none;
+  border: 1px solid var(--red);
+  margin-bottom: .5rem;
+}
+
+.login__form input.error + span {
+  display: flex;
+  align-items: center;
+  color: var(--red);
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-bottom: .75rem;
+  gap: .5rem;
+}
+
+.login__form div {
+  position: relative;
+}
+
+.login__form--viewpass {
+  height: fit-content;
+  width: fit-content;
+  background-color: transparent;
+  padding: .5rem .5rem;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.login__reminder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.login__reminder p {
+  font-size: .75rem;
+}
+
+.login__reminder a {
+  font-size: .75rem;
+  font-weight: normal;
+  text-decoration:underline;
+  color: var(--orange);
+  margin: 0;
+  opacity: .6;
+}
+
+.login__footer {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.login__footer img {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .login {
+    max-width: 26rem;
+    padding: 2.5rem 3.75rem;
+  }
+
+  .login::before, .login::after {
+    display: none;
+  }
+
+  body::before {
+    content: '';
+    width: 22rem;
+    height: 40.3125rem;
+    background: url('/images/bg-desk-l.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  body::after {
+    content: '';
+    width: 22rem;
+    height: 40.3125rem;
+    background: url('/images/bg-desk-r.png') no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 1.375rem;
+    right: 0;
+    z-index: -1;
+  }
+
+  .login__logo {
+    margin-bottom: 2.5rem;
+    height: 4.6875rem;
+  }
+
+  .login__form--legend {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .login__form p {
+    font-size: 1.25rem;
+    margin-bottom: 4rem;
+    line-height: 1.6875rem;
+  }
+
+  .login__form--viewpass {
+    padding: .75rem 1rem;
+  }
+
+  .login__footer {
+    margin-top: 2rem;
+  }
+}
