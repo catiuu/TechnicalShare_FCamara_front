@@ -4,7 +4,7 @@
 
 .main::after {
   content: '';
-  background: url('/public/images/main-bg.png') no-repeat;
+  background: url('/images/main-bg.png') no-repeat;
   background-size: cover;
   background-position: bottom;
   width: 100vw;
@@ -49,6 +49,7 @@
   width: 100%;
   max-width: 45.5rem;
   margin-bottom: 2rem;
+  z-index: 9;
 }
 
 .main__form form {
@@ -66,6 +67,7 @@
   border-radius: 0 3.45rem 3.45rem 0;
   background: var(--button-color);
   padding: 1rem 1.5rem;
+  height: 100%;
 }
 
 .main__form button img {
@@ -89,6 +91,43 @@
   height: auto;
 }
 
+.main__result--phew{
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+  max-width: 24.32rem;
+  margin:0 auto;
+}
+
+.main__result--phew.hidden {
+  display: none;
+}
+
+.main__result--phew p:first-child {
+  font-size: .875rem;
+  font-weight: 700;
+  padding: .5rem;
+  color: var(--white);
+  background: var(--orange);
+  width: fit-content;
+  border-radius: .925rem .925rem .925rem 0;
+  margin-bottom: .25rem;
+}
+
+.main__result--phew p:last-child {
+  font-size: .875rem;
+  font-weight: 700;
+  justify-self: end;
+  padding: .5rem;
+  color: var(--orange);
+  background: var(--white);
+  width: fit-content;
+  border: 1px solid var(--orange);
+  border-radius: .925rem 0 .925rem .925rem;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
 .main__result--cards {
   display: block;
   width: 100%;
@@ -106,6 +145,12 @@
     ". link";
   border-top: 1px solid var(--card-border);
   padding: .5rem .5rem;
+  max-width: 45.5rem;
+  margin: 0 auto;
+}
+
+.main__result--card.hidden {
+  display: none;
 }
 
 .main__result--image img {
@@ -265,7 +310,7 @@
 
 @media screen and (min-width: 1280px){
   .main::after {
-    background: url('/public/images/main-bg-r.png') no-repeat;
+    background: url('/images/main-bg-r.png') no-repeat;
     background-size: cover;
     background-position: right;
     max-width: 31rem;
@@ -277,7 +322,7 @@
 
   .main::before {
     content: '';
-    background: url('/public/images/main-bg-l.png') no-repeat;
+    background: url('/images/main-bg-l.png') no-repeat;
     background-size: cover;
     background-position: left;
     width: 11.625rem;
@@ -310,6 +355,54 @@
     justify-content: center;
     gap: .5rem;
     margin-top: 1.5rem;
+  }
+
+  .main__result--phew p:first-child {
+    font-size: 1.125rem;
+    padding: .5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .main__result--phew p:last-child {
+    font-size: 1.125rem;
+    justify-self: end;
+    padding: .5rem 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .main__result--card {
+    padding: 1rem 1.875rem;
+  }
+  
+  .main__result--image img {
+    width: 5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .main__result--user_name {
+    font-size: 1.125rem;
+    margin-bottom: .5rem;
+  }
+
+  .main__result--user .main__result--user_job {
+    font-size: 1rem;
+  }
+
+  .main__result--techs {
+    padding: 0;
+  }
+  
+  .main__result--techs p {
+    font-size: .875rem;
+    padding: .5rem;
+    border-radius: 1.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .main__result--link a {
+    font-size: 1rem;
+    padding: .75rem 2.125rem;
+    border-radius: 1.875rem;
   }
 
   .profile {
@@ -368,6 +461,7 @@
 
   .profile__techs p {
     margin-bottom: 1rem;
+    margin-right: 1rem;
   }
 
   .profile__contact--slack, .profile__contact--teams {

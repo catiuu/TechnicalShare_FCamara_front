@@ -8,6 +8,7 @@
 
 :root {
   /* Cores principais */
+  --red: #900000;
   --orange: #ff4400;
   --white: #ffffff;
   --login-bg-color: #FFF5EE;
@@ -52,6 +53,10 @@ a, button {
   font-weight: 400;
   color: var(--black);
   opacity: .6;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 1280px) {

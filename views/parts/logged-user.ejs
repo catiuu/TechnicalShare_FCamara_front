@@ -1,0 +1,35 @@
+<main class="container">
+  <section class="profile">
+    <div class="back">
+      <button type="button" aria-label="Voltar página" ><img src="/images/back-btn.svg" alt="" aria-hidden="true"></button>
+    </div>
+    <div class="profile__image">
+      <img src=<%- `/images/${image}.png` %> />
+    </div>
+    <div class="profile__user">
+      <p class="profile__user--name"><%= userName %></p>
+      <p class="profile__user--job"><%= userJob %> • 🖥️</p>
+      <p class="profile__user--pronouns"><%= userPronouns %></p>
+      <p class="profile__user--bio"><%= userBio %></p>
+    </div>
+    <div class="profile__techs">
+      <h2>Especialista em:</h2>
+      <%- userSkills %>
+    </div>
+    <div class="profile__contact">
+      <h2>Entrar em contato:</h2>
+      <div class="profile__contact--links">
+        <div>
+          <a href="#" class="profile__contact--slack"
+            >Slack
+            <img src="/images/slack.svg" alt="" aria-hidden="true" />
+          </a>
+          <a href="#" class="profile__contact--teams"
+            >Teams <img src="/images/teams.svg" alt="" aria-hidden="true"
+          /></a>
+        </div>
+        <a href="#" class="profile__contact--edit hide">Editar Perfil</a>
+      </div>
+    </div>
+  </section>
+</main>

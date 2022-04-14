@@ -1,0 +1,60 @@
+<main class="main container">
+  <section class="main__text">
+    <p class="main__text--title">
+      <span>Encontre um</span><br />
+      #Sangue Laranja
+    </p>
+    <p>Você pode encontrar um profissional pelo:</p>
+    <p>Nome. 2. Hard ou Soft Skills 3. Profissão.</p>
+  </section>
+
+  <section class="main__form">
+    <form action="/search">
+      <label for="search" class="sr-only">
+        Digite um nome, skill ou profissão:
+      </label>
+      <input type="search" id="search" name="searchInput" value="Desenvolvedor" placeholder="Buscar" />
+      <button type="submit" aria-label="Pesquisar">
+        <img src="/images/search.svg" alt="" aria-hidden="true" />
+      </button>
+    </form>
+    <div class="main__form--tags">
+      <p>UX Designer</p>
+      <p>QA</p>
+      <p>Scrum</p>
+      <p>Desenvolvimento de Carreira</p>
+      <p>Desenvolvedor</p>
+    </div>
+  </section>
+  <section class="main__result">
+    <div class="main__result--cards" id="filter"></div>
+  </section>
+</main>
+
+<!-- MODAL que será aberta no primeiro acesso. Para mostrar a modal, será acrescentada a classe "active" -->
+<div class="modal-wrapper active">
+  <div class="modal">
+    <div>
+      <h2>Conheça o Orange Share!</h2>
+      <p>
+        Aqui é o lugar certo para você compartilhar seus conhecimentos e
+        encontrar um <span>#SangueLaranja</span> de forma simples e rápida.
+      </p>
+      <p>
+        Conecte-se com pessoas que vão te ajudar a tirar dúvidas técnicas ou te
+        oferecer um suporte para planejamento de estudo e carreira.
+      </p>
+      <button type="button" class="button">Bora lá!</button>
+    </div>
+  </div>
+</div>
+
+<!-- Script temporário apenas para teste da modal -->
+<script>
+  let modal = document.querySelector('.modal-wrapper')
+  let button = document.querySelector('.modal-wrapper .button')
+
+  button.addEventListener('click', () => {
+    modal.classList.remove('active')
+  })
+</script>

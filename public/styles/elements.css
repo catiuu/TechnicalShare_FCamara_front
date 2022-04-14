@@ -38,6 +38,17 @@
   
   .header__user img {
     width: 1.875rem;
+    clip-path: circle();
+}
+
+  .back {
+    position: absolute;
+    top: 3.75rem;
+    right: 1.25rem;
+  }
+
+  .back button {
+    background-color: transparent;
   }
   
   .button {
@@ -91,6 +102,10 @@
     .header__user img {
       width: 3.25rem;
     }
-  
-  
-  }
+    
+    .back {
+      position: absolute;
+      top: 7.75rem;
+      left: 7.875rem;
+    }
+   

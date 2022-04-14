@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Technical Share FCamara" />
+    <meta
+      name="description"
+      content="Aplicação desenvolvida durante o hackathon do Programa de Formação Season 3."
+    />
+    <meta name="author" content="Squad-3 do Programa de Formação Season 3" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <link rel="icon" href="/images/icon.svg" type="image/icon type" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- Título da página, "visível" apenas para leitores de tela -->
+      <h1 class="sr-only">Technical Share - Página principal</h1>
+      <nav>
+        <a href="/home">
+          <img
+            class="header__logo"
+            src="/images/share-logo.svg"
+            alt="Logomarca da plataforma"
+          />
+        </a>
+        <div class="header__user">
+          <a href="/logged-user/3" data-id="3">
+            <p>Olá, Mario!</p>
+            <img src="/images/3.png" alt="Usuário logado" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <%- include(`parts/${page}`) %>
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/get-users.js"></script>
+  </body>
+</html>
