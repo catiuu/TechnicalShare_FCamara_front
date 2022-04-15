@@ -14,6 +14,9 @@ router.get('/home', function(req, res, next) {
 /* GET logged user page */
 router.get('/logged-user/:id', userController.findUserById)
 
+/* GET user page */
+router.get('/profile/:id', userController.findUserById)
+
 /* GET search page */
 router.get('/search', function (req, res, next) {
   res.render('main', {title: 'Orange Share | Resultados', page: 'search'})

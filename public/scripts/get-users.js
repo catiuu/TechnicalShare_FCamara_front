@@ -71,7 +71,7 @@ function getUsers() {
           ${userSkills}
       </div>
       <div class="main__result--link">
-        <a href="/views/parts/profile.html">Ver Perfil</a>
+        <a href="/profile/${user.id}">Ver Perfil</a>
       </div>
       `;
         cards.appendChild(userCard);
