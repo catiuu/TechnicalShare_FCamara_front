@@ -205,6 +205,12 @@
   padding: .375rem .75rem;
   border-radius: 1.375rem;
   margin-bottom: .5rem;
+  transition: .3s;
+}
+
+.main__form--tags a:hover, .main__form--tags a:focus {
+  color: var(--light-grey);
+  background: var(--button-color);
 }
 
 .main__result--user p, .main__result--info_contact p:first-child {
@@ -229,6 +235,12 @@
   border: 1px solid var(--orange);
   border-radius: 1.25rem;
   margin-top: .625rem;
+  transition: background .3s;
+}
+
+.main__result--link a:hover, .main__result--link a:focus {
+  background: var(--orange);
+  color: var(--white);
 }
 
 .profile__contact--teams {
@@ -246,7 +258,7 @@
     "contact contact"
     "tech tech";
   width: 100%;
-  max-width: 54rem;
+  max-width: 45rem;
   background: var(--white);
   padding: 0 .5rem;
 }
@@ -417,8 +429,7 @@
       "contact contact"
       "tech tech";
     padding: 2rem;
-    margin: 7.3125rem 0 0;
-    box-shadow: 1px 1px 10px rgba(213, 213, 213, 0.5);
+    margin: 5.5rem 0 0;
     border-radius: 1.25rem;
   }
 

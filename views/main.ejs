@@ -31,11 +31,33 @@
           />
         </a>
         <div class="header__user">
-          <a href="/logged-user/3" data-id="3">
+          <a href="#" onclick="show()">
             <p>Olá, Mario!</p>
             <img src="/images/3.png" alt="Usuário logado" />
+            <span>🌙</span>
           </a>
         </div>
+      </nav>
+      <nav class="header__menu">
+        <div>
+          <img src="/images/3.png" alt="Usuário logado" />
+          <div class="header__menu--user">
+            <p>Mario Bros</p>
+            <p>🌙 Ausente</p>
+          </div>
+          <label for="status" class="sr-only">Atualize seu status</label>
+          <select name="" id="status">
+            <option value="" disabled selected>🙂Atualize seu status</option>
+            <option value="disponivel">🟢 Disponível</option>
+            <option value="ausente">🌙 Ausente</option>
+            <option value="nao perturbe">⛔ Não Perturbe</option>
+            <option value="invisivel">⚪ Invisível</option>
+          </select>
+        </div>
+        <hr>
+        <a href="/logged-user/3" data-id="3">Perfil</a>
+        <a href="#">Editar Perfil</a>
+        <a href="/">Sair do Orange Share</a>
       </nav>
     </header>
 
@@ -43,5 +65,6 @@
     <script src="/scripts/get-users.js"></script>
     <script src="/scripts/modal-control.js"></script>
     <script src="/scripts/handle-status.js"></script>
+    <script src="/scripts/open-menu.js"></script>
   </body>
 </html>
