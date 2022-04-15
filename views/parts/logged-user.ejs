@@ -6,7 +6,7 @@
     <div class="profile__image">
       <img src=<%- `/images/${image}.png` %> />
     </div>
-    <div class="profile__user">
+    <div class="profile__user" data-user="<%- image %>">
       <p class="profile__user--name"><%= userName %></p>
       <p class="profile__user--job"><%= userJob %> • 🖥️</p>
       <p class="profile__user--pronouns"><%= userPronouns %></p>
@@ -15,8 +15,8 @@
       <p><%= userBio %></p>
     </div>
     <div class="profile__contact">
-      <h2>Status: <span>🟢Disponível</span></h2>
-      <h2>Disponibilidade: <span>Dias de terça e quarta, das 9h às 10h</span></h2>
+      <h2>Status: <span class="profile__contact--status">🟢Disponível</span></h2>
+      <h2 class="profile__contact--daytime">Disponibilidade: <span>Dias de terça e quarta, das 9h às 10h</span></h2>
       <h2>Entrar em contato:<span><a href="#" class="profile__contact--teams"
         >Teams <img src="/images/teams.svg" alt="" aria-hidden="true"
       /></a></span> </h2>

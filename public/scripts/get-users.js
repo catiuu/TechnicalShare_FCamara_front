@@ -51,7 +51,7 @@ function getUsers() {
         const userCard = document.createElement("div");
         userCard.classList.add("main__result--card");
         //userCard.classList.add("hidden");
-        userCard.setAttribute("data-id", `${user.id}`);
+        userCard.setAttribute("data-user", `${user.id}`);
 
         for (let i = 0; i < user.Skills.length; i++) {
           userSkills += `
