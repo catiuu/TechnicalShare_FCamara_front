@@ -76,6 +76,11 @@
   background: var(--button-color);
   padding: 1rem 1.5rem;
   height: 100%;
+  transition: background .3s;
+}
+
+.main__form button:hover, .main__form button:focus {
+  background: rgba(75, 79, 161, .6);
 }
 
 .main__form button img {
@@ -190,7 +195,7 @@
   font-size: 1.125rem;
 }
 
-.main__result--techs p, .profile__techs p, .main__form--tags p {
+.main__result--techs p, .profile__techs p, .main__form--tags a {
   display: inline-block;
   font-size: .75rem;
   font-weight: 700;
@@ -216,7 +221,7 @@
   justify-content: flex-end;
 }
 
-.main__result--link a, .profile__contact--slack, .profile__contact--teams, .profile__contact--edit {
+.main__result--link a, .profile__contact--teams, .profile__contact--edit {
   font-size: .75rem;
   font-weight: 700;
   color: var(--orange);
@@ -289,7 +294,6 @@
 .profile__techs {
   grid-area: tech;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--card-border);
 }
 
 .profile__techs p {
@@ -332,28 +336,6 @@
 }
 
 @media screen and (min-width: 1280px){
-  .main::after {
-    background: url('/images/main-bg-r.png') no-repeat;
-    background-size: cover;
-    background-position: top;
-    max-width: 31rem;
-    height: 6rem;
-    top: 9.125rem;
-    right: 0;
-    position: absolute;
-  }
-
-  .main::before {
-    content: '';
-    background: url('/images/main-bg-l.png') no-repeat;
-    background-size: cover;
-    background-position: left;
-    width: 8.5rem;
-    height: 28.5rem;
-    bottom: 5rem;
-    left: 0;
-    position: absolute;
-  }
 
   .main__text--title {
     font-size: 2.875rem;
@@ -431,8 +413,9 @@
   .profile {
     grid-template-areas:
       "photo user"
-      "photo tech"
-      "photo contact";
+      "photo bio"
+      "contact contact"
+      "tech tech";
     padding: 2rem;
     margin: 7.3125rem 0 0;
     box-shadow: 1px 1px 10px rgba(213, 213, 213, 0.5);
@@ -445,17 +428,17 @@
   }
 
   .profile__image img {
-    width: 18.75rem;
+    width: 12.5rem;
     margin-right: 1.875rem;
   }
 
   .profile__user--name {
-    font-size: 1.625rem;
+    font-size: 1.125rem;
     line-height: 2.5rem;
   }
 
   .profile__user--job, .profile__user--pronouns {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: .5rem;
   }
@@ -474,7 +457,7 @@
   }
 
   .profile__techs h2, .profile__contact h2 {
-    font-size: 1.125rem;
+    font-size: 1rem;
     padding: 1rem 0;
   }
 
@@ -483,11 +466,16 @@
   }
 
   .profile__techs p {
+    font-size: .875rem;
+    padding: .5rem .625rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
   }
 
-  .profile__contact--slack, .profile__contact--teams {
+  .profile__contact--teams {
+    font-size: 1rem;
+    padding: .75rem 1.5rem;
     margin-top: 0;
   }
 }
+  

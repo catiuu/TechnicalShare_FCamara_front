@@ -90,6 +90,11 @@ body {
   font-size: .875rem;
   font-weight: 700;
   color:var(--button-color);
+  transition: background .3s;
+}
+
+.login__button:hover, .login__button:focus {
+  background: rgba(75, 79, 161, .3);
 }
 
 .login__button img {

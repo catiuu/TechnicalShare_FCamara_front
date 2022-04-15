@@ -91,3 +91,14 @@ function getUsers() {
 document.querySelector("button").addEventListener("click", () => {
   getUsers();
 });
+
+let searchInput = document.querySelector("#search")
+let tags = document.querySelectorAll('.main__form--tags a')
+tags.forEach(tag => {
+  tag.addEventListener('click', event=>{
+    event.preventDefault()
+    searchInput.value = event.target.innerText.toLowerCase()
+    document.querySelector("button").click()
+  })
+})
+

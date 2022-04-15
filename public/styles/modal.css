@@ -108,14 +108,14 @@
 @media screen and (min-width: 1280px) {
   .modal-wrapper .modal, .modal-wrapper .login__modal {
     border-radius: 1.875rem;
-    padding: 9rem 6rem;
+    padding: 6.5rem 6.5rem;
     width: 47.5rem;
   }
 
   .modal-wrapper .modal {
     background: var(--login-bg-color);
     background-image: url('/images/foguete.png');
-    background-size: 12.32rem 37.25rem;
+    background-size: 13.31rem 32.25rem;
     background-position: 0 0;
     background-repeat: no-repeat;
   }
@@ -138,9 +138,9 @@
   }
   
   .modal-wrapper .modal p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
-    line-height: 2rem;
+    line-height: 1.375rem;
     max-width: 26rem;
   }
 
