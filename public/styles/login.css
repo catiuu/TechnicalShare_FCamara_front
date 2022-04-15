@@ -79,52 +79,37 @@ body {
 }
 
 .login__form label {
-  font-size: .875rem;
-  font-weight: 500;
-  color: var(--black);
-  margin-bottom: 1.5rem;
+  display:none;
 }
 
 .login__form input[type="email"] {
-  margin-bottom: 1rem;
+  display:none;
 }
 
 .login__form--pass {
-  margin-bottom: 2.5rem;
-}
-
-.login__form input + span {
-  display: none;
-}
-
-.login__form input.error {
-  outline: none;
-  border: 1px solid var(--red);
-  margin-bottom: .5rem;
-}
-
-.login__form input.error + span {
-  display: flex;
-  align-items: center;
-  color: var(--red);
-  font-weight: 400;
-  font-size: 0.75rem;
-  margin-bottom: .75rem;
-  gap: .5rem;
+  display:none;
 }
 
 .login__form div {
   position: relative;
 }
 
-.login__form--viewpass {
-  height: fit-content;
-  width: fit-content;
-  background-color: transparent;
-  padding: .5rem .5rem;
-  top: 0;
-  right: 0;
-  position: absolute;
+.login__button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1.625rem;
+  padding-left: 1rem;
+  background: var(--white);
+  border: 2px solid var(--button-color);
+  border-radius: 1.875rem;
+  font-size: .875rem;
+  font-weight: 700;
+  color:var(--button-color);
+}
+
+.login__button img {
+  height: 1rem;
 }
 
 .login__reminder {
@@ -213,5 +198,16 @@ body {
 
   .login__footer {
     margin-top: 2rem;
+  }
+
+  .login__button {
+    gap: 1.25rem;
+    padding: .75rem 4rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .login__button img {
+    height: 1.875rem;
   }
 }
