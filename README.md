@@ -10,7 +10,7 @@
 Este é o front-end da aplicação web desenvolvida durante a etapa de hackaton do Programa de Formação da FCamara.
 O Technical Share tem como proposta ser uma plataforma de busca que possibilita o colaborador encontrar de forma rápida e fácil, colegas mais experientes em determinada tecnologia, que possa auxiliá-lo com dúvidas rápidas ou até mesmo uma mentoria de carreira.
 
-💻 [Acesse a aplicação](https://technicalsherfront-api.herokuapp.com/)
+💻 [Acesse a aplicação](https://orangesharefront-api.herokuapp.com/)
 
 :art: [Figma da aplicação](https://www.figma.com/file/EO58GAr06G8QHEC2RLqtts/Squad-3?node-id=142%3A5)
 
@@ -54,6 +54,8 @@ O Technical Share tem como proposta ser uma plataforma de busca que possibilita 
   <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=%2361DAFB" />
   <img src="https://img.shields.io/badge/EJS-A91E50?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Postgres-07405E?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sequelize-02afef?style=for-the-badge&logo=sequelize&logoColor=white" />
+  
 </div>
 
 ---
