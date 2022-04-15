@@ -16,11 +16,12 @@ function getUsers() {
   // Declaração de variáveis
   const cards = document.querySelector(".main__result--cards");
   const phewMsg = `
-    <div class="main__result--phew hidden">
-      <p>Ufa!</p>
-      <p>Achamos alguém para te ajudar.</p>
-    </div>
+  <div class="main__result--phew">
+  <p>Ufa!</p>
+  <p>Achamos alguém para te ajudar.</p>
+  </div>
   `;
+  cards.innerHTML = phewMsg;
   const apiUrl = "https://technicalsaher-api.herokuapp.com/admin/users/skills";
 
   fetch(apiUrl)
@@ -45,7 +46,6 @@ function getUsers() {
       // Seta a variável usada pelos cards, com os usuários encontrados.
       data = users;
 
-      cards.innerHTML = phewMsg;
       data.forEach((user) => {
         let userSkills = "";
         const userCard = document.createElement("div");
@@ -75,6 +75,9 @@ function getUsers() {
       </div>
       `;
         cards.appendChild(userCard);
+        
+        const text = document.querySelector('.main__text')
+        text.style.display = 'none'
       });
     })
     .catch(

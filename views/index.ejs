@@ -22,7 +22,7 @@
     <main>
       <section class="login">
         <!-- Título da página, "visível" apenas para leitores de tela -->
-        <h1 class="sr-only">Technical Share - Faça seu login</h1>
+        <h1 class="sr-only">Orange Share - Faça seu login</h1>
         <img
           src="/images/share-logo.svg"
           alt="Logomarca da plataforma"
@@ -32,36 +32,11 @@
           <fieldset>
             <legend class="login__form--legend">Conecte-se!</legend>
             <p>Faça parte dessa comunidade</p>
-            <label for="email"
-              >Digite seu email corporativo
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              data-type="email"
-              placeholder="E-mail Corporativo"
-            />
-
-            <div>
-              <label for="password">Digite sua senha</label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                class="login__form--pass"
-                data-type="pass"
-                placeholder="Senha"
-              />
-
-              </a>
-            </div>
             <button type="submit" class="login__button"><img src="/images/teams.svg" alt="" aria-hidden="true">Entrar com o Teams</button>
           </fieldset>
         </form>
         <div class="login__reminder">
           <p>Seu login é seu e-mail corporativo da FCamara</p>
-          <a href="#">Esqueceu sua senha?</a>
         </div>
       </section>
     </main>
@@ -69,43 +44,5 @@
     <footer class="login__footer">
       <img src="/images/orange-footer.svg" alt="" aria-hidden="true" />
     </footer>
-
-    <!-- MODAL que será aberta caso seja clicado o "esqueci a senha". -->
-    <div class="modal-wrapper">
-      <div class="login__modal">
-        <div>
-          <h2>Ei! Esqueceu sua senha?</h2>
-          <a href="#" role="button" aria-label="Fechar modal">
-            <img src="/images/sair.svg" alt="" aria-hidden="true" />
-          </a>
-        </div>
-        <p>Fique tranquilo!</p>
-        <p>
-          Para redefinir sua senha basta ir em seu e-mail Corporativo da FCamara
-          no Office Business.
-        </p>
-        <p>
-          Redefina a senha e logo em seguida retorne à plataforma da Orange
-          Share.
-        </p>
-        <p>Viu como é fácil?</p>
-      </div>
-    </div>
-
-    <!-- Script temporário apenas para teste da modal -->
-    <script type="module" src="/scripts/index.js"></script>
-    <script>
-      let forgot = document.querySelector('.login__reminder a')
-      let modal = document.querySelector('.modal-wrapper')
-      let button = document.querySelector('.modal-wrapper a')
-
-      forgot.addEventListener('click', () => {
-        modal.classList.add('active')
-      })
-
-      button.addEventListener('click', () => {
-        modal.classList.remove('active')
-      })
-    </script>
   </body>
 </html>

@@ -46,8 +46,8 @@ body {
 
 .login__logo {
   display: block;
-  height: 2.9375rem;
-  margin-bottom: 1rem;
+  height: 2.875rem;
+  margin-bottom: 1.5rem;
 }
 
 .login__form {
@@ -75,23 +75,7 @@ body {
   font-weight: 500;
   color: var(--black);
   opacity: .6;
-  margin-bottom: 1.5rem;
-}
-
-.login__form label {
-  display:none;
-}
-
-.login__form input[type="email"] {
-  display:none;
-}
-
-.login__form--pass {
-  display:none;
-}
-
-.login__form div {
-  position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .login__button {
@@ -116,11 +100,14 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 2rem 0 0;
+  padding: 2.5rem 0 0;
 }
 
 .login__reminder p {
   font-size: .75rem;
+  font-weight: 600;
+  width: 12rem;
+  margin-bottom: 0;
 }
 
 .login__reminder a {

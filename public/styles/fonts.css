@@ -7,14 +7,14 @@
 
 @font-face {
   font-family: 'Metropolis';
-  src: url('/public/fonts/Metropolis-Light.otf') format('opentype');
+  src: url('/fonts/Metropolis-Light.otf') format('opentype');
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Metropolis';
-  src: url('/public/fonts/Metropolis-Medium.otf') format('opentype');
+  src: url('/fonts/Metropolis-Medium.otf') format('opentype');
   font-style: normal;
   font-weight: 500;
 }
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: 'Metropolis';
-  src: url('/public/fonts/Metropolis-Black.otf') format('opentype');
+  src: url('/fonts/Metropolis-Black.otf') format('opentype');
   font-style: normal;
   font-weight: 900;
 }
