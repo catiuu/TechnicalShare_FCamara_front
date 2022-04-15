@@ -34,7 +34,7 @@ O Technical Share tem como proposta ser uma plataforma de busca que possibilita 
     npm install
 ```
 
-4. Rodar o projeto
+3. Rodar o projeto
 
 ```sh
     npm run dev
@@ -50,7 +50,7 @@ O Technical Share tem como proposta ser uma plataforma de busca que possibilita 
 
 ---
 
-## 🚀 Desenvolvedoras: 
+## 🚀 Desenvolvedoras:
 
 <table>
     <tr align="center">
