@@ -13,7 +13,13 @@
       <label for="search" class="sr-only">
         Digite um nome, skill ou profissão:
       </label>
-      <input type="search" id="search" name="searchInput" value="Desenvolvedor" placeholder="Buscar" />
+      <input
+        type="search"
+        id="search"
+        name="searchInput"
+        value="Desenvolvedor"
+        placeholder="Buscar"
+      />
       <button type="submit" aria-label="Pesquisar">
         <img src="/images/search.svg" alt="" aria-hidden="true" />
       </button>
@@ -51,14 +57,14 @@
 
 <!-- Script temporário apenas para teste da modal -->
 <script>
-  let modal = document.querySelector('.modal-wrapper')
-  let button = document.querySelector('.modal-wrapper .button')
+  let modal = document.querySelector(".modal-wrapper");
+  let button = document.querySelector(".modal-wrapper .button");
 
-  modal.addEventListener('click', () => {
-    modal.classList.remove('active')
-  })
+  modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
 
-  button.addEventListener('click', () => {
-    modal.classList.remove('active')
-  })
+  button.addEventListener("click", () => {
+    modal.classList.remove("active");
+  });
 </script>
