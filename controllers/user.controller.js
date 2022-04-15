@@ -93,7 +93,7 @@ class Controller {
       }
         
       await res.render('main', {
-        title: 'Orange Share | Seu Perfil',
+        title: 'Orange Share | Perfil',
         page: 'logged-user',
         userName: user.fullName,
         userJob: user.jobTitle,

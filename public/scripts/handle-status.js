@@ -6,3 +6,4 @@ if(userId == 3) {
     profileStatus.innerHTML = "🌙 Ausente"
     profileAvail.style.display = 'none' 
 }
+
