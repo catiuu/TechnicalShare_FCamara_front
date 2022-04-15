@@ -9,14 +9,13 @@
   </section>
 
   <section class="main__form">
-    <form action="/search">
+    <form action="/search" onsubmit="event.preventDefault();">
       <label for="search" class="sr-only">
         Digite um nome, skill ou profissão:
       </label>
       <input
         type="search"
         id="search"
-        name="searchInput"
         placeholder="Buscar"
       />
       <button type="submit" aria-label="Pesquisar">
